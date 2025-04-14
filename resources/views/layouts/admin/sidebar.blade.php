@@ -1,0 +1,197 @@
+<!-- Desktop sidebar -->
+<aside class="z-20 hidden w-64 overflow-y-auto bg-white dark:bg-gray-800 md:block flex-shrink-0">
+  <div class="py-4 text-gray-500 dark:text-gray-400">
+    <a class="ml-6 text-lg font-bold text-gray-800 dark:text-gray-200" href="{{ route('admin.dashboard') }}">
+    Admin - Panel     
+          
+    </a>
+    
+    <ul class="mt-6">
+      {{-- Dashboard --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/dashboard'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.dashboard') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/dashboard') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+          </svg>
+          <span class="ml-4">Dashboard</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul>
+      {{-- Profil Sekolah --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/profil-sekolah*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.profil-sekolah.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/profil-sekolah*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+          </svg>
+          <span class="ml-4">Profil</span>
+        </a>
+      </li>
+
+      {{-- Tenaga Kerja --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/tenaga-kerja*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.tenaga-kerja.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/tenaga-kerja*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 14l9-5-9-5-9 5z" />
+            <path d="M12 14v7l9-5v-7z" />
+            <path d="M12 14v7l-9-5v-7z" />
+          </svg>
+          <span class="ml-4">Tenaga Kerja</span>
+        </a>
+      </li>
+
+      {{-- Prestasi --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/prestasi*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.prestasi.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/prestasi*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2l2.92 6.14 6.77-.55-5.03 4.86L17.6 21 12 17.4 6.4 21l.94-7.09-5.03-4.86 6.77.55L12 2z" />
+          </svg>
+          <span class="ml-4">Prestasi</span>
+        </a>
+      </li>
+
+      {{-- Alumni --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/alumni*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.alumni.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/alumni*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 14l9-5-9-5-9 5z" />
+            <path d="M12 14v7l9-5v-7z" />
+            <path d="M12 14v7l-9-5v-7z" />
+          </svg>
+          <span class="ml-4">Alumni</span>
+        </a>
+      </li>
+
+      {{-- Galeri --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/galeri*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.galeri.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/galeri*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4v16h16V4H4zm2 2h12v12H6V6z" />
+          </svg>
+          <span class="ml-4">Galeri</span>
+        </a>
+      </li>
+
+      {{-- Fasilitas Sekolah --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/fasilitas-sekolah*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.fasilitas-sekolah.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/fasilitas-sekolah*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 9V5a2 2 0 00-2-2H6a2 2 0 00-2 2v4M3 19v-6h18v6" />
+          </svg>
+          <span class="ml-4">Fasilitas Sekolah</span>
+        </a>
+      </li>
+
+      {{-- Pengumuman --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/pengumuman*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.pengumuman.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/pengumuman*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 11H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2zM5 11V9a2 2 0 012-2m12 4V9a2 2 0 00-2-2M7 7V5a2 2 0 012-2h6a2 2 0 012 2v2"/>
+          </svg>
+          <span class="ml-4">Pengumuman</span>
+        </a>
+      </li>
+
+      {{-- Ekstrakurikuler --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/ekstrakurikuler*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.ekstrakurikuler.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/ekstrakurikuler*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 12L2 2m2 0l8 8m-8 0l8 8M12 12l8-8m-8 8l8 8" />
+          </svg>
+          <span class="ml-4">Ekstrakurikuler</span>
+        </a>
+      </li>
+
+      {{-- Event --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/event*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.event.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/event*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M8 7v14h8V7H8zM6 4h12V2H6v2z" />
+          </svg>
+          <span class="ml-4">Event</span>
+        </a>
+      </li>
+
+      {{-- Kontak --}}
+      <li class="relative px-6 py-3">
+        @if (Request::is('admin/kontak*'))
+          <span class="absolute inset-y-0 left-0 w-1 bg-purple-600 rounded-tr-lg rounded-br-lg" aria-hidden="true"></span>
+        @endif
+        <a href="{{ route('admin.kontak.index') }}"
+          class="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 
+          {{ Request::is('admin/kontak*') ? 'text-gray-800 dark:text-gray-100' : 'text-gray-500 dark:text-gray-400' }}
+          hover:text-gray-800 dark:hover:text-gray-200">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2a2 2 0 00-2 2v7a2 2 0 00-2 2h4a2 2 0 00-2-2V4a2 2 0 002-2z" />
+            <path d="M8 11v8a4 4 0 004 4h0a4 4 0 004-4v-8" />
+          </svg>
+          <span class="ml-4">Kontak</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</aside>
